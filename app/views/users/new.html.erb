@@ -1,0 +1,38 @@
+<section  class="u-h-100vh u-flex-center login-back" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 m-auto text-center">
+					<div class="card box-shadow-v2 bg-white u-of-hidden">
+						<h2 class="bg-purple-light m-0 py-3 text-white">Crear Cuenta</h2>
+						<div class="p-4 p-md-5">
+
+                            <%= form_for @user do |f| %>
+                            <div>
+                                <%= f.label :Nombre %>
+                                <%= f.text_field :name, autofocus: true %>
+                            </div>
+                            <div>
+                                <%= f.label :Correo %>
+                                <%= f.text_field :email %>
+                            </div>
+
+                            <div>
+                                <%= f.label :Contraseña %>
+                                <%= f.password_field :password %>
+                            </div>
+                            <div>
+                                <%= f.label :"Confirmar contraseña" %>
+                                <%= f.password_field :password_confirmation %>
+                            </div>
+                            <br>
+                            <div>
+                                <%= f.submit "Crear cuenta", class: 'btn btn-primary btn-lg' %>
+                            </div>
+                            <% end %>
+
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>

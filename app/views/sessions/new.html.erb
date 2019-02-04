@@ -1,0 +1,43 @@
+<section  class="u-h-100vh u-flex-center login-back" >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 m-auto text-center">
+					<div class="card box-shadow-v2 bg-white u-of-hidden">
+						<h2 class="bg-purple-light m-0 py-3 text-white">Iniciar Sesión</h2>
+						<div class="p-4 p-md-5">
+                            <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+                                <div class="form-group">
+                                    <div class="control-label col-sm-2">
+                                        <%= f.label :correo %>
+                                    </div>
+                                    <div>
+                                        <%= f.email_field :email, class: "form-control", placeholder: "Correo electrónico", autofocus: true %>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="control-label col-sm-2">
+                                        <%= f.label :contraseña %>
+                                    </div>
+                                    <div>
+                                        <%= f.password_field :password, class: "form-control", autocomplete: "off" %>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="#">Olvidó su contraseña?</a>
+                                </div>
+                                <div class="form-group">
+                                    <div>
+                                        <%= f.submit "Iniciar", class: 'btn btn-primary btn-lg' %>
+                                    </div>
+                                </div>
+                            <% end %>
+							<p>
+								No tiene cuenta?
+                                <%= link_to 'Crear cuenta', new_user_path(@patient),class:"text-primary" %>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
