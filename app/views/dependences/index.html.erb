@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dependences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>State</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dependences.each do |dependence| %>
+      <tr>
+        <td><%= dependence.name %></td>
+        <td><%= dependence.description %></td>
+        <td><%= dependence.state %></td>
+        <td><%= link_to 'Show', dependence %></td>
+        <td><%= link_to 'Edit', edit_dependence_path(dependence) %></td>
+        <td><%= link_to 'Destroy', dependence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dependence', new_dependence_path %>

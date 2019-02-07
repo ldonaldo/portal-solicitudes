@@ -7,27 +7,31 @@
 						<div class="p-4 p-md-5">
 
                             <%= form_for @user do |f| %>
-                            <div>
-                                <%= f.label :Nombre %>
-                                <%= f.text_field :name, autofocus: true %>
-                            </div>
-                            <div>
-                                <%= f.label :Correo %>
-                                <%= f.text_field :email %>
-                            </div>
+                                <div>
+                                    <%= f.label :Nombres %>
+                                    <%= f.text_field :name, autofocus: true %>
+                                </div>
+                                <div>
+                                    <%= f.label :Apellidos %>
+                                    <%= f.text_field :second_name %>
+                                </div>
+                                <div>
+                                    <%= f.label :Correo %>
+                                    <%= f.text_field :email %>
+                                </div>
 
-                            <div>
-                                <%= f.label :Contraseña %>
-                                <%= f.password_field :password %>
-                            </div>
-                            <div>
-                                <%= f.label :"Confirmar contraseña" %>
-                                <%= f.password_field :password_confirmation %>
-                            </div>
-                            <br>
-                            <div>
-                                <%= f.submit "Crear cuenta", class: 'btn btn-primary btn-lg' %>
-                            </div>
+                                <div>
+                                    <%= f.label :Contraseña %>
+                                    <%= f.password_field :password %>
+                                </div>
+                                <div>
+                                    <%= f.label :"Confirmar contraseña" %>
+                                    <%= f.password_field :password_confirmation %>
+                                </div>
+                                <br>
+                                <div>
+                                    <%= f.submit "Crear cuenta", class: 'btn btn-primary btn-lg' %>
+                                </div>
                             <% end %>
 
                         </div>
