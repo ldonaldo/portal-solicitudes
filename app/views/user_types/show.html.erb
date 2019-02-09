@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user_type.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @user_type.description %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @user_type.state %>
+</p>
+
+<%= link_to 'Edit', edit_user_type_path(@user_type) %> |
+<%= link_to 'Back', user_types_path %>

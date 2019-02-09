@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  resources :requests
+  resources :user_types
   resources :dependences
   get 'pages/secret'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -20,6 +24,7 @@ Rails.application.routes.draw do
 	# delete action to log out:
 	delete '/logout' => 'sessions#destroy'  
   	
-  	# ----- end of added lines -----
+    # ----- end of added lines -----
+ 
 
 end
